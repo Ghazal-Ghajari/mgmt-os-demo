@@ -127,8 +127,8 @@ Management OS, Integration Health Check
 
 ## About me
 
-PhD candidate in Computer Science (Wright State University, SMART Lab).  
+PhD candidate in Computer Science (Wright State University).  
 Research: Hyperdimensional Computing for IoT anomaly detection · GAN-based sensor synthesis · LLM-assisted security pipelines.  
-14 peer-reviewed publications · h-index 5 · Claude API experience in production research pipelines.
+14 peer-reviewed publications · 59 citations. h-index 5 · Claude API experience in production research pipelines.
 
 I build and ship things. This repo is evidence of that.
