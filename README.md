@@ -2,7 +2,7 @@
 
 A focused portfolio artifact for the **Management OS Engineering & Product Intern** role.
 
-Two tools that mirror the actual internship work — built with the same stack, the same mindset, and shipped to prove it.
+Two tools that mirror the actual internship work, built with the same stack, the same mindset, and shipped to prove it.
 
 ---
 
@@ -10,7 +10,7 @@ Two tools that mirror the actual internship work — built with the same stack, 
 
 | File | What it does |
 |------|-------------|
-| `insight_generator.py` | Sends structured business metrics to the Claude API and returns a three-part leadership brief: *what changed · what it means · where to lead next* — the core value proposition of Management OS |
+| `insight_generator.py` | Sends structured business metrics to the Claude API and returns a three-part leadership brief: *what changed · what it means · where to lead next*, the core value proposition of Management OS |
 | `integration_checker.py` | Probes the live endpoints of every service in the Mgmt OS stack (Anthropic, Stripe, HubSpot, Supabase, Vercel, Clerk) and produces a health report |
 | `tests/test_insight_generator.py` | 18-test suite covering input validation, prompt construction, mocked API calls, CLI argument parsing, and edge cases |
 
@@ -24,7 +24,7 @@ cd mgmt-os-demo
 pip install anthropic pytest
 ```
 
-### Run the insight generator (demo mode — no API key needed to explore)
+### Run the insight generator (demo mode, no API key needed to explore)
 
 ```bash
 python insight_generator.py --demo
@@ -70,10 +70,10 @@ Expected output: **18 passed**.
 ## Design decisions
 
 **Why Python, not TypeScript?**
-The two tools are pure logic — API calls, HTTP probes, data transformation. Python lets me ship something complete and testable in the time it would take to configure a TypeScript project. The same design ports directly to the Next.js / TypeScript stack.
+The two tools are pure logic, API calls, HTTP probes, data transformation. Python lets me ship something complete and testable in the time it would take to configure a TypeScript project. The same design ports directly to the Next.js / TypeScript stack.
 
 **Why mock the API in tests?**
-Tests should be fast, free, and deterministic. Mocking the Anthropic client isolates the logic I control (prompt construction, error handling, CLI parsing) from network variability. Integration tests against real endpoints are a separate concern — that's what `integration_checker.py` is for.
+Tests should be fast, free, and deterministic. Mocking the Anthropic client isolates the logic I control (prompt construction, error handling, CLI parsing) from network variability. Integration tests against real endpoints are a separate concern, that's what `integration_checker.py` is for.
 
 **Why probe real endpoints in the integration checker?**
 Because that's the actual job. The tool surfaces exactly what a new engineer needs to know on day one: which services are reachable, which need credentials, and which are broken.
@@ -109,14 +109,14 @@ compound the revenue risk.
 ### `integration_checker.py`
 
 ```
-Management OS — Integration Health Check
+Management OS, Integration Health Check
 ──────────────────────────────────────────────────────────────────
   Service                    Status         Latency    Note
 ──────────────────────────────────────────────────────────────────
-  ✅  Anthropic API           ok             74 ms      HTTP 404 — healthy.
+  ✅  Anthropic API           ok             74 ms      HTTP 404, healthy.
   🔑  Stripe API              auth_required  23 ms      Set $STRIPE_SECRET_KEY to test fully.
   🔑  HubSpot API             auth_required  23 ms      Set $HUBSPOT_TOKEN to test fully.
-  ✅  Supabase                ok             19 ms      HTTP 200 — healthy.
+  ✅  Supabase                ok             19 ms      HTTP 200, healthy.
   🔑  Vercel API              auth_required  11 ms      Set $VERCEL_TOKEN to test fully.
   🔑  Clerk API               auth_required  33 ms      Set $CLERK_SECRET_KEY to test fully.
 ──────────────────────────────────────────────────────────────────
